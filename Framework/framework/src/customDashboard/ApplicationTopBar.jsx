@@ -5,21 +5,8 @@ import SearchIcon from '@mui/icons-material/Search'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import CloseIcon from '@mui/icons-material/Close';
 
-export default function ApplicationTopBar({openSideBarComponent}) {
-    const [isIcon,setIsIcon]=useState(false)
-    // const clickIconChanged = () => {
-    //   setIsIcon(prevState => !prevState);  // Toggle between MenuIcon and CloseIcon
-    //   alert("Testing is successfully selected");
-  
-    //   // Trigger your action to open/close the sidebar here
-    //   if (isIcon) {
-    //     // You can replace this with your actual function to open the sidebar
-    //     console.log("Opening sidebar");
-    //   } else {
-    //     // Replace this with your function to close the sidebar
-    //     console.log("Closing sidebar");
-    //   }
-    // };
+export default function ApplicationTopBar({openSideBarComponent,appliCationTitleName}) {
+
   return (
     <>
       <Box sx={{ width: '100%', position: 'relative' }}>
@@ -29,7 +16,9 @@ export default function ApplicationTopBar({openSideBarComponent}) {
             display: 'flex', 
             justifyContent: 'space-between', 
             bgcolor: '#1976d2',  // Dark blue background
-            color: 'white'  // White font color for contrast
+            color: 'white',  // White font color for contrast
+            height:'70px'
+            
           }}
         >
           <Box padding={3} sx={{ display: 'flex', gap: 3, textAlign: 'center', alignItems: 'center' }}>
@@ -38,7 +27,7 @@ export default function ApplicationTopBar({openSideBarComponent}) {
 
        
             </IconButton>
-            <Typography sx={{ color: 'white' }}>Custom Framework</Typography>
+            <Typography sx={{ color: 'white' }}>{appliCationTitleName}</Typography>
           </Box>
           <Box padding={3} sx={{ display: 'flex', gap: 5, textAlign: 'center', alignItems: 'center' }}>
           <TextField

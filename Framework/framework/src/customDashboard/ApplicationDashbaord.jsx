@@ -5,11 +5,16 @@ import ApplicationTopBar from './ApplicationTopBar'
 
 export default function ApplicationDashbaord() {
   const [sideBarComponent ,setSideBarComponent]=useState(false)
+  const [appliCationTitleName,setApplicationTitleName] =useState('Custom Applications')
   
   
   const openSideBarComponent =()=>{
     setSideBarComponent(!sideBarComponent)
+    setApplicationTitleName('Dashbaord ')
    
+  }
+  const TitleApplicationBar =()=>{
+
   }
   return (
     <>
@@ -17,7 +22,7 @@ export default function ApplicationDashbaord() {
    {
     sideBarComponent &&(
     <Box sx={{
-      width: '12%',
+      width: '15%',
       position: 'fixed',
       top: 0,
       left: 0,
@@ -33,10 +38,10 @@ export default function ApplicationDashbaord() {
     sx={{
       flex: 1,
       transition: 'margin-left 0.3s ease',
-      marginLeft: sideBarComponent ? '12%' : '0%',
+      marginLeft: sideBarComponent ? '16%' : '0%',
     }}>
 
-<ApplicationTopBar  openSideBarComponent={openSideBarComponent}/>    
+<ApplicationTopBar  openSideBarComponent={openSideBarComponent} appliCationTitleName={appliCationTitleName}/>    
     </Box>
    </Box>
     </>
