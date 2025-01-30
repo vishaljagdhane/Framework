@@ -49,7 +49,7 @@ export default function ApplicationsLeftSideBar({ MenuIteam }) {
                 textAlign: "center",
               }}
             >
-              Your Company Name
+          Aligned Automation
             </Typography>
           </Box>
         </Box>
@@ -71,6 +71,11 @@ export default function ApplicationsLeftSideBar({ MenuIteam }) {
             <ListItem>
               <ListItemButton onClick={() => MenuIteam("Dashabord")}>
                 <ListItemText primary="Dashabord" />
+              </ListItemButton>
+            </ListItem>
+            <ListItem>
+              <ListItemButton onClick={() => MenuIteam("Button")}>
+                <ListItemText primary="Button Component" />
               </ListItemButton>
             </ListItem>
           </List>
