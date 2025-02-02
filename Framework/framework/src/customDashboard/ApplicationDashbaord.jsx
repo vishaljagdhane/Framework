@@ -4,6 +4,7 @@ import ApplicationsLeftSideBar from './ApplicationsLeftSideBar'
 import ApplicationTopBar from './ApplicationTopBar'
 import DashbaordPages from '../CommonComponent/DashbordComponent/DashbaordPages'
 import ButtonMainComponent from '../CommonComponent/ButtonComponent/ButtonMainComponent'
+import Dashboard1 from '../CommonComponent/DashbordComponent/Dashabord1'
 
 export default function ApplicationDashbaord() {
   const [sideBarComponent, setSideBarComponent] = useState(false)
@@ -25,7 +26,7 @@ export default function ApplicationDashbaord() {
       case 'home':
         return <DashbaordPages />
       case 'Dashabord':
-        return <h1>Dashboard Page</h1>
+        return <Dashboard1/>
       case 'Button':
         return <ButtonMainComponent />
       case 'Table':

@@ -20,7 +20,7 @@ import TextFieldsIcon from '@mui/icons-material/TextFields';
 export default function ApplicationsLeftSideBar({ MenuIteam }) {
   const ListData = [
     { label: "Home", action: "home", onClick: () => MenuIteam("home"), icon: <HomeIcon /> },
-    { label: "Dashboard", action: "dashboard", onClick: () => MenuIteam("dashboard"), icon: <DashboardIcon /> },
+    { label: "Dashboard", action: "dashboard", onClick: () => MenuIteam("Dashabord"), icon: <DashboardIcon /> },
     { label: "Button Component", action: "button", onClick: () => MenuIteam("Button"), icon: <ButtonIcon /> },
     { label: "Table Component", action: "table", onClick: () => MenuIteam("Table"), icon: <TableChartIcon /> },
     { label: "Card Component", action: "card", onClick: () => MenuIteam("card"), icon: <CardMembershipIcon /> },
