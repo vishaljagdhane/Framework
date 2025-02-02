@@ -12,12 +12,12 @@ export default function ApplicationDashbaord() {
 
   const openSideBarComponent = () => {
     setSideBarComponent(!sideBarComponent)
-    setApplicationTitleName(sideBarComponent ? 'Aligned Automation' : 'Dashboard') // Toggle the title based on sidebar state
+    setApplicationTitleName(sideBarComponent ? 'Your Componay Name' : 'Dashboard') // Toggle the title based on sidebar state
   }
 
   const handleMenuChange = (item) => {
     setMenuContent(item)
-    setApplicationTitleName(item === 'home' ? 'Aligned Automation' : 'Dashboard') // Set appropriate title based on selection
+    setApplicationTitleName(item === 'home' ? 'Your Compnay Name ' : 'Dashboard') // Set appropriate title based on selection
   }
 
   const renderContent = () => {
@@ -26,8 +26,18 @@ export default function ApplicationDashbaord() {
         return <DashbaordPages />
       case 'Dashabord':
         return <h1>Dashboard Page</h1>
-        case 'Button':
-          return <ButtonMainComponent/>
+      case 'Button':
+        return <ButtonMainComponent />
+      case 'Table':
+        return <h1>Table Componnet </h1>
+      case 'card':
+        return <h1>Card Component</h1>
+      case 'AlertWithBox':
+        return <h1>AlertWidth Box</h1>
+        case'TextFild':
+        return <h1>Text Filed</h1>
+        case 'SingleSelect ':
+          return <h1>Single Select</h1>
       default:
         return <h1>Welcome!</h1>
     }
@@ -38,7 +48,7 @@ export default function ApplicationDashbaord() {
       {sideBarComponent && (
         <Box
           sx={{
-            width: '16%',
+            width: '17%',
             position: 'fixed',
             top: 0,
             left: 0,
@@ -54,7 +64,7 @@ export default function ApplicationDashbaord() {
         sx={{
           flex: 1,
           transition: 'margin-left 0.3s ease',
-          marginLeft: sideBarComponent ? '16%' : '0%',
+          marginLeft: sideBarComponent ? '17%' : '0%',
         }}
       >
         <ApplicationTopBar
