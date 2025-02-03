@@ -50,7 +50,7 @@ export default function ApplicationDashbaord() {
       {sideBarComponent && (
         <Box
           sx={{
-            width: '17%',
+            width: '19%',
             position: 'fixed',
             top: 0,
             left: 0,
@@ -66,7 +66,7 @@ export default function ApplicationDashbaord() {
         sx={{
           flex: 1,
           transition: 'margin-left 0.3s ease',
-          marginLeft: sideBarComponent ? '17%' : '0%',
+          marginLeft: sideBarComponent ? '19%' : '0%',
         }}
       >
         <ApplicationTopBar
