@@ -4,6 +4,7 @@ import ApplicationsLeftSideBar from './ApplicationsLeftSideBar'
 import ApplicationTopBar from './ApplicationTopBar'
 import DashbaordPages from '../CommonComponent/DashbordComponent/DashbaordPages'
 import ButtonMainComponent from '../CommonComponent/ButtonComponent/ButtonMainComponent'
+import DashbaordComponent from '../CommonComponent/Dashbaord/DashbaordComponent'
 
 export default function ApplicationDashbaord() {
   const [sideBarComponent, setSideBarComponent] = useState(false)
@@ -12,18 +13,18 @@ export default function ApplicationDashbaord() {
 
   const openSideBarComponent = () => {
     setSideBarComponent(!sideBarComponent)
-    setApplicationTitleName(sideBarComponent ? 'Aligned Automation' : 'Dashboard') // Toggle the title based on sidebar state
+    setApplicationTitleName(sideBarComponent ? '' : 'Dashboard') // Toggle the title based on sidebar state
   }
 
   const handleMenuChange = (item) => {
     setMenuContent(item)
-    setApplicationTitleName(item === 'home' ? 'Aligned Automation' : 'Dashboard') // Set appropriate title based on selection
+    setApplicationTitleName(item === 'home' ? '' : 'Dashboard') // Set appropriate title based on selection
   }
 
   const renderContent = () => {
     switch (menuContent) {
       case 'home':
-        return <DashbaordPages />
+        return <DashbaordComponent />
       case 'Dashabord':
         return <h1>Dashboard Page</h1>
         case 'Button':
@@ -34,7 +35,7 @@ export default function ApplicationDashbaord() {
   }
 
   return (
-    <Box sx={{ width: '100%', height: '100%', background: '#EFF3F8' }}>
+    <Box sx={{ width: '100%', height: 'auto', background: '#EFF3F8' }}>
       {sideBarComponent && (
         <Box
           sx={{
