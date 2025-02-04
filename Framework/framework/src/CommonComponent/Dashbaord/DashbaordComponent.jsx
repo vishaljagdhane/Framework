@@ -20,7 +20,7 @@ const fontFamily = [
   return (
     <>
       <Box sx={{width:'100%',height:'auto',padding:2}}>
-    <Typography variant='h5'></Typography>
+    <Typography variant='h5'>Use Officical font and style </Typography>
 
       </Box>
     </>

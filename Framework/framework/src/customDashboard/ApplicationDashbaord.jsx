@@ -5,6 +5,7 @@ import ApplicationTopBar from './ApplicationTopBar'
 import DashbaordPages from '../CommonComponent/DashbordComponent/DashbaordPages'
 import ButtonMainComponent from '../CommonComponent/ButtonComponent/ButtonMainComponent'
 import Dashboard1 from '../CommonComponent/DashbordComponent/Dashabord1'
+import TableMainComponent from '../CommonComponent/Tables/TableMainComponent'
 // import DashbaordComponent from '../CommonComponent/DashbordComponent/DashbaordPages'
 
 export default function ApplicationDashbaord() {
@@ -31,7 +32,7 @@ export default function ApplicationDashbaord() {
       case 'Button':
         return <ButtonMainComponent />
       case 'Table':
-        return <h1>Table Componnet </h1>
+        return <TableMainComponent/>
       case 'card':
         return <h1>Card Component</h1>
       case 'AlertWithBox':
